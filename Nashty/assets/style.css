@@ -1,0 +1,287 @@
+/* assets/style.css EXPERT FLAT MODERN */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    /* Base Colors - LIGHT (Default) */
+    --bg-color: #f8f9fa;
+    --card-bg: #ffffff;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+
+    /* Accents */
+    --primary-color: #5a4ad1;
+    --success-color: #0fa968;
+    --info-color: #2d7ef7;
+    --warning-color: #f59e0b;
+    --danger-color: #ef4444;
+
+    --border-radius: 12px;
+    --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="dark"] {
+    /* CORONA Inspired Dark Theme */
+    --bg-color: #000000;
+    /* Deep Black Background */
+    --card-bg: #191c24;
+    /* Dark Grey Cards */
+    --text-main: #ebedef;
+    /* Light Text */
+    --text-muted: #6c7293;
+    /* Muted Text */
+    --border-color: #2c2e33;
+    /* Dark Borders */
+
+    --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+    --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.7);
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'Inter', sans-serif;
+    color: var(--text-main);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Dashboard Header */
+/* Dashboard Header - Premium / Distinctive */
+.dashboard-header {
+    background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+    /* Nashty Dark Theme */
+    border-bottom: none;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+    color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.brand-text {
+    font-weight: 800;
+    color: #ffffff;
+    /* White text for contrast */
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.dashboard-header .btn-light {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.dashboard-header .btn-light:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+/* Footer */
+.main-footer {
+    text-align: center;
+    padding: 2rem 0;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-top: 3rem;
+    border-top: 1px solid #e2e8f0;
+}
+
+/* Specific Cards for Expert Reqs */
+.stat-card {
+    border: none;
+    border-radius: var(--border-radius);
+    background: var(--card-bg);
+    box-shadow: var(--shadow-soft);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+}
+
+.stat-card.purple::before {
+    background-color: var(--primary-color);
+}
+
+.stat-card.green::before {
+    background-color: var(--success-color);
+}
+
+.stat-card.blue::before {
+    background-color: var(--info-color);
+}
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.bg-purple-soft {
+    background-color: rgba(90, 74, 209, 0.1);
+    color: var(--primary-color);
+}
+
+.bg-green-soft {
+    background-color: rgba(15, 169, 104, 0.1);
+    color: var(--success-color);
+}
+
+.bg-blue-soft {
+    background-color: rgba(45, 126, 247, 0.1);
+    color: var(--info-color);
+}
+
+.stat-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0;
+    line-height: 1.2;
+}
+
+.stat-label {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+/* Table */
+.custom-table-wrapper {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-soft);
+    padding: 1.5rem;
+}
+
+table.dataTable thead th {
+    background-color: #f1f5f9;
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    border-bottom: none !important;
+}
+
+table.dataTable tbody td {
+    border-bottom: 1px solid #f1f5f9 !important;
+    vertical-align: middle;
+}
+
+.btn-action {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+.btn-action:hover {
+    transform: scale(1.1);
+}
+
+/* Modals */
+.modal-content {
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.modal-header {
+    border-bottom: 1px solid #e2e8f0;
+    padding: 1.5rem;
+}
+
+.modal-footer {
+    border-top: 1px solid #e2e8f0;
+    padding: 1.5rem;
+    background-color: #f8fafc;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+/* Forms */
+.form-label {
+    font-weight: 500;
+    font-size: 0.875rem;
+    color: var(--text-main);
+}
+
+.form-control,
+.form-select {
+    background-color: var(--card-bg);
+    /* Adaptive BG */
+    color: var(--text-main);
+    /* Adaptive Text */
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    padding: 0.6rem 1rem;
+}
+
+.form-control::placeholder {
+    color: var(--text-muted);
+}
+
+.form-control:focus,
+.form-select:focus {
+    background-color: var(--card-bg);
+    color: var(--text-main);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(90, 74, 209, 0.1);
+}
+
+/* Modal Headers/Footers Adaptive */
+.modal-content {
+    background-color: var(--card-bg);
+}
+
+.modal-header {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.modal-footer {
+    border-top: 1px solid var(--border-color);
+    background-color: var(--bg-color);
+    /* Slightly different from card */
+}
+
+.modal-title {
+    color: var(--text-main);
+}
+
+.btn-close {
+    filter: invert(var(--invert-icon));
+    /* Trick to invert close button if needed, or use CSS filter */
+}
+
+[data-theme="dark"] .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+/* Login specific (kept from previous step but refined) */
+.login-container {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: var(--shadow-hover);
+}
